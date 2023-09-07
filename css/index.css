@@ -340,7 +340,7 @@ footer section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: brown;
+  padding: 20px 0px;
 }
 
 footer section p {
