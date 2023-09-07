@@ -55,8 +55,12 @@ header figure {
   width: 100%;
   height: 45vh;
   padding-left: 300px;
-  background-image: url(../images/pix-1-removebg-preview.png);
-  background-repeat: no-repeat;
+  background-image:
+            linear-gradient(45deg,
+              rgba(0, 1, 7, 0.5),
+              rgba(0, 4, 7, 0.5)),  url(../images/pix-1-removebg-preview.png);
+              background-repeat: no-repeat;
+              background-size: cover;
   box-sizing: border-box;
   padding-left: 400px;
 }
@@ -71,13 +75,13 @@ header figure {
 
 .description h1 {
   color: white;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bolder;
 }
 
 .description h3 {
   color: white;
-  font-size: 16px;
+  font-size: 29px;
   font-weight: lighter;
 }
 
@@ -85,10 +89,11 @@ header figure {
   display: inline-block;
   text-align: center;
   font-weight: bold;
-  width: 250px;
+  width: 25em;
   border: none;
+  font-size: 1em;
   border-radius: 5px;
-  height: 50px;
+  height: 5em;
   color: rgb(5, 124, 211);
 }
 
@@ -106,22 +111,28 @@ header figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  text-align: justify;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  text-align: justify;
+  gap: 20px;
+  padding-top: 10px 0px;
   color: rgb(141, 133, 133);
 }
+
+.difference h4 {
+  text-align: center;
+  font-size: 1.7em;
+}
+
 
 .difference button {
   display: inline-block;
   text-align: center;
   font-weight: bold;
-  width: 250px;
+  width: 25em;
   border: 2px solid rgb(5, 124, 211);
   border-radius: 5px;
-  height: 50px;
+  height: 5em;
+  font-size: 1em;
   background-color: white;
   color: rgb(5, 124, 211);
 }
@@ -140,38 +151,214 @@ footer {
   width: 100%;
   height: 20vh;
   padding-left: 50px;
-  background-color: rgb(5, 124, 211);
+  background-color: rgb(1, 52, 88);
   color: white;
   box-sizing: border-box;
   gap: 30px;
+  padding: 0px;
 }
 
 footer section {
   display: flex;
   flex: 1;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-footer figure {
+footer section figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
-  width: 50px;
-  height: 50px;
+  width: 10em;
+  height: 10em;
   border-radius: 100%;
 }
 
 footer figure img {
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
 }
 
-footer figure figcaption {
+footer section p {
   color: white;
-  font-size: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media screen and (max-width:1200px) {
+  body {
+    flex-direction: column;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .body {
+    width: 100vw;
+    height: auto;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header figure {
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+header figure img {
+  width: 150px;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: yellow;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45vh;
+  background-image:
+            linear-gradient(45deg,
+              rgba(0, 1, 7, 0.5),
+              rgba(0, 4, 7, 0.5)),  url(../images/pix-1-removebg-preview.png);
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.description {
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+  height: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.description h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.description h3 {
+  color: white;
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+
+.description button {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  width: 20em;
+  padding: 1em;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  height: 4em;
+  color: rgb(136, 99, 6);
+}
+
+.description button:hover{ 
+  background-color:rgb(4, 46, 77) ;
+  color: white;
+  box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+  border: 3px solid white;
+}
+
+.difference {
+  gap: 50px;
+  text-align: center;
+  padding: 5em;
+}
+
+.difference h4 {
+  font-size: 1em;
+}
+
+.difference button {
+  width: 20em auto;
+  height: 4em auto;
+  padding: 10px;
+  font-size: 20px;
+  color: rgb(136, 99, 6);
+  border: 2px solid rgb(136, 99, 6);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding-left: 0px;
+  background-color: rgb(136, 99, 6);
+  color: white;
+  gap: 30px;
+}
+
+footer section {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: brown;
+}
+
+footer section p {
+  font-size: 20px;
+}
+
+footer figure{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
 }
